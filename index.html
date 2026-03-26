@@ -117,6 +117,11 @@
   transition: 0.3s;
 }
 
+.card img {
+  margin-bottom: 10px;
+}
+
+
 .card:hover {
   transform: translateY(-5px);
 }
@@ -165,11 +170,13 @@
 </header>
 
 <section class="hero">
-  <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" 
+  <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1" 
        style="width:100%; max-height:300px; object-fit:cover; border-radius:10px;">
 
   <h1>{{NOME}}</h1>
-  <p>{{DESCRICAO1}}</p>
+<p style="font-size:20px; font-weight:bold;">
+  Transforme seu visual com cortes modernos e atendimento profissional.
+</p>
   <p>{{DESCRICAO2}}</p>
   <p>{{DESCRICAO3}}</p>
 
@@ -201,27 +208,44 @@
 </section>
 
 <section class="servicos">
+  <h2>Localização</h2>
+  <p>Atendemos em {{CIDADE}} - {{BAIRRO}}</p>
+</section>
+
+<section class="servicos">
   <h2>Serviços</h2>
 
 <div class="card">
+  <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033" 
+       style="width:100%; border-radius:10px;">
   <h3>{{SERVICO1}}</h3>
   <p>{{PRECO1}}</p>
 </div>
 
 <div class="card">
+  <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a" 
+       style="width:100%; border-radius:10px;">
   <h3>{{SERVICO2}}</h3>
   <p>{{PRECO2}}</p>
 </div>
 
 <div class="card">
+  <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" 
+       style="width:100%; border-radius:10px;">
   <h3>{{SERVICO3}}</h3>
   <p>{{PRECO3}}</p>
 </div>
+
+
 </section>
 
 <footer>
-  © 2023 Barbearia {{NOME}}
+  © <span id="ano"></span> Barbearia {{NOME}}
 </footer>
+
+<script>
+document.getElementById("ano").innerHTML = new Date().getFullYear();
+</script>
 
 <a href="https://wa.me/{{WHATSAPP}}" class="whatsapp-fixo" target="_blank">
   <i class="fab fa-whatsapp"></i>
