@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Barbearia {{NOME}} - Corte de Cabelo e Barba</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0f0f0f;
+      color: white;
+    }
+
+    header {
+      background: black;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(black, #1a1a1a);
+    }
+
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .botao {
+      background: #25D366;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+ 
+.insta-fixo {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #E1306C;
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  font-size: 22px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+    .servicos {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .card {
+      background: #1c1c1c;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      width: 200px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: black;
+      margin-top: 40px;
+    }
+
+  @media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .botao {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+}
+
+.botao:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .whatsapp-fixo span {
+    display: none;
+  }
+}
+
+
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.whatsapp-fixo i {
+  font-size: 20px;
+}
+
+.whatsapp-fixo:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
+}
+
+.insta-fixo:hover {
+  transform: scale(1.1);
+  background: #c72c61;
+}
+
+.insta-fixo {
+  transition: 0.3s;
+}
+  </style>
+</head>
+
+<body>
+
+<header>
+  A vida não é perfeita, mas o seu cabelo pode ser.  ✂️
+</header>
+
+<section class="hero">
+  <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" 
+       style="width:100%; max-height:300px; object-fit:cover; border-radius:10px;">
+
+  <h1>{{NOME}}</h1>
+  <p>{{DESCRICAO1}}</p>
+  <p>{{DESCRICAO2}}</p>
+  <p>{{DESCRICAO3}}</p>
+
+  <a class="botao" href="https://wa.me/{{WHATSAPP}}?text=Olá,%20quero%20agendar%20um%20horário">
+    Agendar agora pelo WhatsApp
+  </a>
+
+  <a href="https://instagram.com/{{INSTAGRAM}}" class="insta-fixo" target="_blank">
+  <i class="fab fa-instagram"></i>
+</a>
+
+</section>
+
+<section class="servicos">
+  <h2>Sobre a Barbearia</h2>
+  <p>Atendemos com qualidade, estilo e atenção aos detalhes. Especialistas em cortes modernos e barba.</p>
+</section>
+
+<section class="servicos">
+  <h2>Depoimentos</h2>
+
+  <div class="card">
+    “corte na régua” ⭐⭐⭐⭐⭐
+  </div>
+
+  <div class="card">
+    “Super profissional e criativo” ⭐⭐⭐⭐⭐
+  </div>
+</section>
+
+<section class="servicos">
+  <h2>Serviços</h2>
+
+<div class="card">
+  <h3>{{SERVICO1}}</h3>
+  <p>{{PRECO1}}</p>
+</div>
+
+<div class="card">
+  <h3>{{SERVICO2}}</h3>
+  <p>{{PRECO2}}</p>
+</div>
+
+<div class="card">
+  <h3>{{SERVICO3}}</h3>
+  <p>{{PRECO3}}</p>
+</div>
+</section>
+
+<footer>
+  © 2023 Barbearia {{NOME}}
+</footer>
+
+<a href="https://wa.me/{{WHATSAPP}}" class="whatsapp-fixo" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+  <span>Fale conosco</span>
+</a>
+</body>
+</html>
